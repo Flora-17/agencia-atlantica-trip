@@ -1,0 +1,524 @@
+
+@use 'variables' as *;
+@mixin flexbox($justify: center, $align: center) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+}
+
+@mixin background-image($img) {
+  background-image: url($img);
+  background-size: cover;
+  background-position: center;
+}
+
+@mixin responsive($property, $mobile, $tablet, $desktop) {
+  #{$property}: $mobile;
+  
+  @media (min-width: 768px) {
+      #{$property}: $tablet;
+  }
+  
+  @media (min-width: 1024px) {
+      #{$property}: $desktop;
+  }
+}
+
+$hero-height: 400px;
+$font-size-p: 1.5rem;
+$font-size-btn: 1.2rem;
+$padding: 20px;
+
+
+.hero-section {
+  @include flexbox;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover; 
+  background-position: center; 
+  flex-direction: column;
+  text-align: center; 
+  color: $text-color;
+  padding: $padding;
+  overflow: hidden;
+}
+
+
+   
+    p {
+        font-size: $font-size-p;
+        margin-bottom: 20px; 
+      
+    }
+
+   
+    .btn {
+        font-size: $font-size-btn;
+        padding: 10px 20px; 
+        color: $text-color;
+    }
+
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1; 
+  }
+  
+
+  .hero-section {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+ 
+  
+  .hero-content {
+    position: relative;
+    z-index: 2; 
+    color: rgb(251, 247, 247);
+    padding: 20px;
+    top: 35%;
+  }
+  
+  .hero-content p {
+    font-size: 1rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-content .btn {
+    font-size: 1rem;
+    padding: 20px 30px;
+  }
+  .overlay-image {
+    position: absolute; 
+    top: 56%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 600px; 
+    height: auto;
+  }
+  .hero-section::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(1, 25, 84, 0.35); 
+    pointer-events: none; 
+  }
+  
+  .navbar {
+    @include flexbox(space-between, center);
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000; 
+    background: linear-gradient(rgba(0, 50, 180, 0.8), rgba(0, 50, 180, 0.8)); 
+    backdrop-filter: blur(3px); 
+  }
+  .calendario-container {
+    background-color: #ffffff;
+    padding: 40px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 60px;
+    
+  }
+  
+  h3 {
+    font-size: 1rem;
+    margin-top: 20px;
+    color: #0032B4;
+  }
+  
+  p {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+  }
+  
+  #sobre-nosotros {
+    position: relative;
+    background-image: url('img/agua-burbujas.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+    padding-top: 200px;  
+    color: #f4f4f7;  
+}
+
+  #sobre-nosotros .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.3); 
+    z-index: 0;
+  }
+  
+  #sobre-nosotros h2,
+  #sobre-nosotros p,
+  #sobre-nosotros .row {
+    position: relative;
+    z-index: 1;
+  }
+  
+  
+  
+  #sobre-nosotros h2,
+  #sobre-nosotros p,
+  #sobre-nosotros .row {
+    margin-top: 20px;
+    
+  }
+  
+  #contacto-form {
+    background-color: #03242e;
+    padding: 20px 0;
+    width: 100%;
+    margin: 0;
+    
+    }
+  
+  #contacto-form h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+    color: #ffffff;
+    margin-left: 5px;
+  
+  
+  }
+  #contacto-form p {
+    color: #ffffff;
+  }
+  #contacto-form .row {
+   margin: 0;
+   padding: 50px 0;
+  }
+  
+  html, body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .navbar .dropdown-menu {
+    background-color: rgba(0, 0, 0, 0.7); 
+    border: none;
+    border-radius: 10px; 
+    padding: 0;
+    color: #fff;
+  }
+  
+  
+  .navbar .dropdown-item {
+    color: white; 
+    padding: 10px 20px;
+    transition: background 0.3s ease-in-out;
+  }
+  
+  
+  .navbar .dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.2); 
+  }
+  
+  
+  .navbar .dropdown-toggle {
+    color: rgb(254, 251, 251) !important;
+  }
+  
+  
+  .navbar .dropdown-menu {
+    min-width: 180px;
+  }
+  .dropdown-menu {
+    display: none;
+    opacity: 0;
+    transform: translateY(10px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+  
+  
+  .show {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .swim-trip-container {
+    background: white;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2); 
+    border-radius: 10px; 
+    max-width: 900px; 
+    margin: auto;
+  }
+  .swim-trip-title {
+    color: #0077b6;
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: -10px; 
+  }
+  .swim-trip-container h2, 
+  .swim-trip-container h3 {
+    color: #004080; 
+  }
+  
+  .swim-trip-container h4 {
+    color: $primary-color;
+    margin-top: 20px;
+  }
+  
+  .swim-trip-container ul {
+    padding-left: 20px;
+  }
+  
+  .swim-trip-container ul li {
+    margin-bottom: 8px;
+  }
+  .travesia-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .travesia-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .travesia-card img {
+    height: 180px;
+    object-fit: cover;
+  }
+  
+  .travesia-card .card-body {
+    background: $primary-color;
+    padding: 15px;
+  }
+  
+  .travesia-card h5 {
+    color: #0077b6;
+    font-weight: bold;
+  }
+  
+  .travesia-card p {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+  .option-card {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .option-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .option-card img {
+    height: 200px;
+    object-fit: cover;
+  }
+  
+  .option-card .card-body {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+  }
+  
+  .table {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+  }
+  
+  .table thead {
+    background-color: #0077b6;
+    color: white;
+  }
+  
+  .table tbody tr:nth-child(even) {
+    background-color: #f8f9fa;
+  }
+  .accordion-button {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: #0077b6;
+    color: white;
+  }
+  
+  .accordion-button:hover {
+    background-color: #005f8b;
+  }
+  
+  .accordion-body {
+    background: #f8f9fa;
+    border-left: 5px solid #0077b6;
+    padding: 15px;
+  }
+  
+  .accordion-body ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .accordion-body li {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .accordion-body p {
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #555;
+  }
+  
+  .btn-outline-primary {
+    font-size: 14px;
+    padding: 5px 10px;
+  }
+  
+  #calendario-competencias {
+    margin-top: 100px; 
+    padding-top: 80px;
+  }
+  
+  #daytrip-page {
+    background-color: white;
+    padding: 60px 0;
+  }
+  
+  #daytrip-page h1, 
+  #daytrip-page h2 {
+    color: $primary-color;
+  }
+  
+  #daytrip-page .card {
+    border: none;
+    border-radius: 10px;
+  }
+  
+  #daytrip-page .card-body {
+    background: #e3f2fd;
+    border-radius: 10px;
+  }
+  
+  #daytrip-page .btn-primary {
+    background-color: $primary-color;
+    border: none;
+  }
+  
+  #daytrip-page .btn-primary:hover {
+    background-color: #005f86;
+  }
+  
+  .blog-comunidad {
+    font-family: Arial, sans-serif;
+  }
+  
+ 
+  .blog-comunidad .hero {
+    background: url('imagen-hero.jpg') no-repeat center center/cover;
+    color: white;
+    text-align: center;
+    padding: 80px 20px;
+  }
+  
+
+  .blog-comunidad .category-card {
+    transition: transform 0.3s;
+    cursor: pointer;
+  }
+  
+  .blog-comunidad .category-card:hover {
+    transform: scale(1.05);
+  }
+  
+ 
+  .blog-comunidad .card {
+    margin-bottom: 20px;
+  }
+  
+  .blog-comunidad .card img {
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .blog-comunidad .cta {
+    margin-top: 40px;
+    text-align: center;
+  }
+  .footer {
+    @include flexbox;
+    background: linear-gradient(rgba(0, 50, 180, 0.8), rgba(0, 50, 180, 0.8)); 
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    font-size: 1rem;
+    margin: 10px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #0077b6; 
+}
+
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+.social-icons a:hover {
+    transform: scale(1.1);
+}
+.category-card-link {
+  text-decoration: none; 
+}
+
+.category-card {
+  background: $primary-color;
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease-in-out, background 0.3s ease-in-out;
+  border-radius: 10px;
+}
+
+.category-card:hover {
+  transform: scale(1.05);
+  background: #005f8b;
+}
+
+  
