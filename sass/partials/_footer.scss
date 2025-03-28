@@ -1,0 +1,29 @@
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.footer {
+  @include flexbox;
+  background: linear-gradient(rgba(0, 50, 180, 0.8), rgba(0, 50, 180, 0.8)); 
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: $primary-color; 
+}
