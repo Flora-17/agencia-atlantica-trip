@@ -6,24 +6,6 @@
   align-items: $align;
 }
 
-@mixin background-image($img) {
-  background-image: url($img);
-  background-size: cover;
-  background-position: center;
-}
-
-@mixin responsive($property, $mobile, $tablet, $desktop) {
-  #{$property}: $mobile;
-  
-  @media (min-width: 768px) {
-      #{$property}: $tablet;
-  }
-  
-  @media (min-width: 1024px) {
-      #{$property}: $desktop;
-  }
-}
-
 $hero-height: 400px;
 $font-size-p: 1.5rem;
 $font-size-btn: 1.2rem;
