@@ -1,17 +1,184 @@
-/* Error: Can't find stylesheet to import.
- *   ,
- * 2 | @use 'partials/mixins';
- *   | ^^^^^^^^^^^^^^^^^^^^^^
- *   '
- *   sass\style.scss 2:1  root stylesheet */
-
-body::before {
-  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
-      "Droid Sans Mono", monospace, monospace;
-  white-space: pre;
-  display: block;
-  padding: 1em;
-  margin-bottom: 1em;
-  border-bottom: 2px solid black;
-  content: "Error: Can't find stylesheet to import.\a   \2577 \a 2 \2502  @use 'partials/mixins';\d\a   \2502  ^^^^^^^^^^^^^^^^^^^^^^\a   \2575 \a   sass\\style.scss 2:1  root stylesheet";
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f1faff;
 }
+
+h2 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 60px;
+}
+
+h3 {
+  font-size: 1rem;
+  margin-top: 20px;
+  color: #0032B4;
+}
+
+p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: linear-gradient(rgba(0, 50, 180, 0.8), rgba(0, 50, 180, 0.8));
+  backdrop-filter: blur(3px);
+}
+
+.navbar .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  border-radius: 10px;
+  padding: 0;
+  color: #fff;
+}
+
+.navbar .dropdown-item {
+  color: white;
+  padding: 10px 20px;
+  transition: background 0.3s ease-in-out;
+}
+
+.navbar .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.hero-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  flex-direction: column;
+  text-align: center;
+  color: #050505;
+  padding: 20px;
+  overflow: hidden;
+}
+
+.hero-image {
+  background-image: url("../img/header.jpg");
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  color: white;
+  padding: 20px;
+  top: 35%;
+}
+
+.hero-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.hero-section::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(1, 25, 84, 0.35);
+  pointer-events: none;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(rgba(0, 50, 180, 0.8), rgba(0, 50, 180, 0.8));
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.footer p {
+  font-size: 1rem;
+  margin: 10px 0;
+}
+
+.footer a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.footer a:hover {
+  color: #0077b6;
+}
+
+.btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+  color: #050505;
+}
+
+.travesia-card {
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.travesia-card:hover {
+  transform: scale(1.05);
+}
+
+.travesia-card .card-body {
+  background: #0077b6;
+  padding: 15px;
+}
+
+#sobre-nosotros {
+  position: relative;
+  background-image: url("img/agua-burbujas.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 1000px;
+  padding-top: 200px;
+  color: #f4f4f7;
+}
+
+#sobre-nosotros .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
+}
+
+#contacto-form {
+  background-color: #03242e;
+  padding: 20px 0;
+  width: 100%;
+}
+
+/*# sourceMappingURL=style.css.map */
