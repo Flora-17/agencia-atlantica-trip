@@ -13,6 +13,7 @@
   color: $text-color;
   padding: $padding;
   overflow: hidden;
+  
 }
 
 .hero-image {
@@ -32,11 +33,11 @@
   z-index: 2; 
   color: white;
   padding: 20px;
-  top: 35%;
+  top: 15%;
 }
 
 .hero-content p {
-  font-size: 1rem;
+  font-size: 1.5rem;
   margin-bottom: 20px;
 }
 
@@ -50,3 +51,4 @@
   background: rgba(1, 25, 84, 0.35); 
   pointer-events: none; 
 }
+

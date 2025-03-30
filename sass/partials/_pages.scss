@@ -1,8 +1,55 @@
 @use 'variables' as *;
 
+.calendario-container {
+  max-width: 900px;
+  margin: 10px auto;
+  text-align: center;
+  background-color: $background-color;
+
+  h2 {
+    font-size: 2.2rem;
+    font-weight: bold;
+  }
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px; 
+
+  .timeline-event {
+    display: flex;
+    align-items: center;
+    background: #ffffff; 
+    border-left: 5px solid #0077b6; 
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .timeline-date {
+    flex: 1;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #023e8a;
+    text-align: left;
+    padding-left: 10px;
+  }
+
+  .timeline-details {
+    flex: 2;
+    text-align: left;
+    font-size: 1rem;
+    color: #333;
+  }
+
+  strong {
+    color: #0077b6;
+  }
+}
+
 #sobre-nosotros {
   position: relative;
-  background-image: url('img/agua-burbujas.jpg');
+  background-image: url('../img/agua-burbujas.jpg');
   background-size: cover;
   background-position: center;
   min-height: 1000px;
@@ -24,4 +71,5 @@
   background-color: #03242e;
   padding: 20px 0;
   width: 100%;
+  color: #f4f4f7;
 }
