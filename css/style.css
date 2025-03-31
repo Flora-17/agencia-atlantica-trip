@@ -5,21 +5,26 @@ html, body {
   font-weight: 400;
 }
 
+h1 {
+  font-family: "Funnel Display", sans-serif;
+  font-weight: 400;
+}
+
 h2 {
-  font-size: 1.2rem;
-  font-weight: bold;
   margin-bottom: 60px;
+  font-family: "Funnel Display", sans-serif;
 }
 
 h3 {
-  font-size: 1rem;
   margin-top: 20px;
   color: #0032B4;
+  font-family: "Funnel Display", sans-serif;
 }
 
 p {
   font-size: 1rem;
   margin-bottom: 10px;
+  font-family: "Funnel Display", sans-serif;
 }
 
 .navbar {
@@ -33,10 +38,11 @@ p {
   z-index: 1000;
   background: linear-gradient(rgba(0, 50, 180, 0.8), rgba(0, 50, 180, 0.8));
   backdrop-filter: blur(3px);
+  font-family: "Funnel Display", sans-serif;
 }
 
 .navbar .dropdown-menu {
-  background-color: rgba(0, 0, 0, 0.7);
+  background-color: rgba(0, 50, 180, 0.8);
   border: none;
   border-radius: 10px;
   padding: 0;
@@ -64,7 +70,7 @@ p {
   background-position: center;
   flex-direction: column;
   text-align: center;
-  color: #fefdfd;
+  color: #fdfdfe;
   padding: 20px;
   overflow: hidden;
 }
@@ -91,6 +97,7 @@ p {
 .hero-content p {
   font-size: 1.5rem;
   margin-bottom: 20px;
+  font-family: "Funnel Display", sans-serif;
 }
 
 .hero-section::after {
@@ -134,9 +141,85 @@ p {
 }
 
 .btn {
-  font-size: 1.2rem;
-  padding: 10px 20px;
-  color: #fefdfd;
+  font-family: "Funnel Display", sans-serif;
+  display: inline-block;
+  padding: 12px 24px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  background: linear-gradient(135deg, #0077b6, #48cae4);
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+.btn:hover {
+  background: linear-gradient(135deg, #48cae4, #0077b6);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-2px);
+}
+.btn:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding: 30px;
+}
+.timeline .timeline-event {
+  display: flex;
+  align-items: center;
+  background: #ffffff;
+  border-left: 5px solid #0077b6;
+  padding: 15px;
+  border-radius: 8px;
+}
+.timeline .timeline-date {
+  flex: 1;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #03045e;
+  text-align: left;
+  padding-left: 10px;
+  font-family: "Funnel Display", sans-serif;
+}
+.timeline .timeline-details {
+  flex: 2;
+  text-align: left;
+  font-size: 1rem;
+  color: #333;
+  font-family: "Funnel Display", sans-serif;
+}
+.timeline strong {
+  color: #0077b6;
+}
+
+#sobre-nosotros {
+  position: relative;
+  background-image: url("../img/agua-burbujas.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 1000px;
+  padding-top: 200px;
+  color: #f4f4f7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-family: "Funnel Display", sans-serif;
+}
+
+#sobre-nosotros .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
 
 .travesia-card {
@@ -144,6 +227,8 @@ p {
   overflow: hidden;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   transition: transform 0.3s ease-in-out;
+  font-family: "Funnel Display", sans-serif;
+  font-size: 3rem;
 }
 
 .travesia-card:hover {
@@ -159,62 +244,10 @@ p {
   max-width: 900px;
   margin: 10px auto;
   text-align: center;
-  background-color: #f1faff;
 }
 .calendario-container h2 {
   font-size: 2.2rem;
   font-weight: bold;
-}
-
-.timeline {
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-.timeline .timeline-event {
-  display: flex;
-  align-items: center;
-  background: #ffffff;
-  border-left: 5px solid #0077b6;
-  padding: 15px;
-  border-radius: 8px;
-}
-.timeline .timeline-date {
-  flex: 1;
-  font-size: 1.3rem;
-  font-weight: bold;
-  color: #023e8a;
-  text-align: left;
-  padding-left: 10px;
-}
-.timeline .timeline-details {
-  flex: 2;
-  text-align: left;
-  font-size: 1rem;
-  color: #333;
-}
-.timeline strong {
-  color: #0077b6;
-}
-
-#sobre-nosotros {
-  position: relative;
-  background-image: url("../img/agua-burbujas.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 1000px;
-  padding-top: 200px;
-  color: #f4f4f7;
-}
-
-#sobre-nosotros .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 0;
 }
 
 #contacto-form {
@@ -222,6 +255,22 @@ p {
   padding: 20px 0;
   width: 100%;
   color: #f4f4f7;
+}
+
+.swimtrip body {
+  font-family: "Funnel Display", sans-serif;
+}
+
+.table-responsive {
+  font-family: "Funnel Display", sans-serif;
+}
+
+.daytrip-page {
+  font-family: "Funnel Display", sans-serif;
+}
+
+.swim-training-page {
+  font-family: "Funnel Display", sans-serif;
 }
 
 /*# sourceMappingURL=style.css.map */
