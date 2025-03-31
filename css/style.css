@@ -200,28 +200,6 @@ p {
   color: #0077b6;
 }
 
-#sobre-nosotros {
-  position: relative;
-  background-image: url("../img/agua-burbujas.jpg");
-  background-size: cover;
-  background-position: center;
-  min-height: 1000px;
-  padding-top: 200px;
-  color: #f4f4f7;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  font-family: "Funnel Display", sans-serif;
-}
-
-#sobre-nosotros .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
-  z-index: 0;
-}
-
 .travesia-card {
   border-radius: 10px;
   overflow: hidden;
@@ -248,6 +226,28 @@ p {
 .calendario-container h2 {
   font-size: 2.2rem;
   font-weight: bold;
+}
+
+#sobre-nosotros {
+  position: relative;
+  background-image: url("../img/agua-burbujas.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 1000px;
+  padding-top: 200px;
+  color: #f4f4f7;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  font-family: "Funnel Display", sans-serif;
+}
+
+#sobre-nosotros .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 0;
 }
 
 #contacto-form {
